@@ -20,7 +20,6 @@ Neurological conditions such as Parkinson's disease can change how a person's vo
 
 - **ANN (tabular biomarkers):** [UCI Parkinson's dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data) (healthy vs. Parkinson's cases).
 - **CNN and LSTM:** trained on simulated spectrograms and vocal-feature sequences that mimic tremor patterns (see the training plots below), since the UCI dataset contains extracted features rather than raw audio.
-- A synthetic sample voice file is included for testing the app.
 
 ## Sample Output
 
@@ -28,21 +27,21 @@ Neurological conditions such as Parkinson's disease can change how a person's vo
 
 Healthy vs. Parkinson's spectrograms used to train the CNN. The Parkinson's sample shows tremor bands.
 
-![Training spectrograms](images/training_spectrograms.png)
+![Training spectrograms](training_spectograms.png.png)
 
 Audio feature sequences used to train the LSTM, comparing a steady healthy voice with a tremor pattern.
 
-![LSTM sequence](images/lstm_sequence.png)
+![LSTM sequence](lstm_sequence.png.png)
 
 ### Streamlit App
 
 Record a live voice sample (hold "Ahhh" for 5 seconds) or upload a `.wav` file, then run the diagnostics.
 
-![App input](images/app_input.png)
+![App input](app_input.png.png)
 
 The app shows the Mel-Spectrogram fed to the CNN and the predicted Parkinson's probability.
 
-![App output](images/app_output.png)
+![App output](app_output.png.png)
 
 ## Tech Stack
 
@@ -52,11 +51,9 @@ Python, PyTorch, TorchAudio, SoundFile, Praat-Parselmouth, scikit-learn, Pandas,
 
 | File | Description |
 |---|---|
-| `Voice Bio Markers for Neurological conditions (DL).ipynb` | Colab notebook: data loading, model training and benchmarking |
+| `Voice_Bio_Markers_for_Neurological_conditions_(DL)_.ipynb` | Colab notebook: data loading, model training and benchmarking |
 | `app.py` | Streamlit dashboard |
-| `Generate_audio.py` | Generates a synthetic sample voice file |
-| `parkinsons_cnn.pt` | Trained CNN model weights |
-| `sample_patient.wav` | Synthetic sample voice recording for testing |
+| `parkinsons_cnn.pth` | Trained CNN model weights |
 | `requirements.txt` | Python dependencies |
 
 ## Getting Started
